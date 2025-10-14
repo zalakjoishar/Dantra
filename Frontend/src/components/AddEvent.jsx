@@ -84,6 +84,7 @@ function AddEvent() {
                     id="eventId"
                     placeholder="Enter performance ID"
                     {...register("id", { required: "Event ID is required" })}
+                    min={0}
                   />
                   {errors.id && <div className="invalid-feedback">{errors.id.message}</div>}
                 </div>

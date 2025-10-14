@@ -61,7 +61,8 @@ function AddCoordinator() {
                     className={`form-control ${errors.id ? 'is-invalid' : ''}`}
                     id="coordinatorId"
                     placeholder="Enter coordinator ID"
-                    {...register("id", { required: "Coordinator ID is required" })}
+                    {...register("id", { required: "Coordinator ID is required" },{min:"ID cannot be negative"})}
+                    min={0}
                   />
                   {errors.id && <div className="invalid-feedback">{errors.id.message}</div>}
                 </div>

@@ -116,6 +116,7 @@ function AddSlot() {
                     id="slotId"
                     placeholder="Enter slot ID"
                     {...register("id", { required: "Slot ID is required" })}
+                    min={0}
                   />
                   {errors.id && <div className="invalid-feedback">{errors.id.message}</div>}
                 </div>
